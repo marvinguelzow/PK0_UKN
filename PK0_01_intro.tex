@@ -154,7 +154,7 @@ vs
 \end{description}
 \vfill
 
-\hfill\includegraphics[width=0.1\textwidth]{img/irrelephant.jpg}
+\hfill\includegraphics[width=0.2\textwidth]{img/irrelephant.jpg}
 \end{frame}
 
 \section{Erstes Programm}
@@ -206,7 +206,81 @@ public class HelloWorld
 \begin{itemize}
 \item \texttt{main} + \texttt{Space} = Main-Methode
 \item \texttt{Syso} + \texttt{Space} = \texttt{System.out.println}
+\item \texttt{Ctrl+Shift+F} = Offene Datei formatieren
+\item \texttt{Ctrl-1} = Quick fix
+\item Kontextmenü "Source" und "Refactor" sehr praktisch
 \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Fehlersuche}
+  \begin{lstlisting}
+System.out.println("Hello World")
+
+
+Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+    Syntax error, insert ";" to complete Statement
+
+    at Exampleclass.main(Exampleclass.java:10)
+  \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Fehlersuche}
+  \begin{lstlisting}
+public static int value()
+{
+    return 5;
+	
+    
+Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+    Syntax error, insert "}" to complete MethodBody
+
+    at Exampleclass.main(Exampleclass.java:11)
+  \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Fehlersuche}
+  \begin{lstlisting}
+int x = 1/0;
+
+
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+    at Exampleclass.main(Exampleclass.java:13)
+  \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Fehlersuche}
+  \begin{lstlisting}
+for (float i = 0; i < 1.0; i += 0.1)
+{
+    System.out.println(i);
+}
+
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.70000005 // wat?
+0.8000001
+0.9000001
+  \end{lstlisting}
+\end{frame}
+
+\begin{frame}{Fehlersuche}
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/justgoogle.jpg}
+\end{frame}
+
+\begin{frame}{Fehlersuche}
+  \begin{enumerate}
+  \item Fehlermeldung lesen
+  \item Alle eigenen Namen und Pfade löschen
+  \item "Java + [deine Fehlermeldung] googeln
+  \item Bei Stackoverflow \& Co auch weiter runterscrollen
+  \item Kommilitonen und/oder Tutor fragen
+  \end{enumerate}
 \end{frame}
 
 \end{document}
