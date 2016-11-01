@@ -1,0 +1,123 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color
+  basicstyle=\footnotesize,        % size of fonts used for the code
+  breaklines=true,                 % automatic line breaking only at whitespace
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  keywordstyle=\color{blue},       % keyword style
+  stringstyle=\color{mymauve},     % string literal style
+  language=Java,
+  basicstyle=\ttfamily
+}
+
+\lstset{literate=%
+{Ö}{{\"O}}1
+{Ä}{{\"A}}1
+{Ü}{{\"U}}1
+{ß}{{\ss}}2
+{ü}{{\"u}}1
+{ä}{{\"a}}1
+{ö}{{\"o}}1
+}
+
+\usetheme{Berkeley}
+
+\title{PK0}
+\subtitle{Zusatzkurs für Programmieranfänger im WS 16/17}
+\author{Marvin Gülzow}
+\institute{Universität Konstanz}
+\date{2016-11-02}
+
+\begin{document}
+\frame{\maketitle}
+
+\begin{frame}
+\frametitle{Inhalt}
+\tableofcontents
+\end{frame}
+
+\section{Transistorenlevel}
+\begin{frame}{\secname}
+  \centering
+  \includegraphics[width=\textwidth]{img/01_transistor.png}  
+\end{frame}
+
+\begin{frame}{\secname}
+  \centering
+  \includegraphics[width=\textwidth]{img/02_switch.jpg}  
+\end{frame}
+
+\begin{frame}{\secname}
+  \centering
+  \includegraphics[width=\textwidth]{img/03_adder.png}  
+\end{frame}
+
+\begin{frame}{\secname}
+  \centering
+  \includegraphics[width=\textwidth]{img/04_alu.png}  
+\end{frame}
+
+\section{Prozessorarchitektur}
+\begin{frame}{\secname}
+  \centering
+  \includegraphics[width=\textwidth]{img/05_cpu.jpg}  
+\end{frame}
+
+\begin{frame}{\secname}
+  \centering
+  \includegraphics[width=\textwidth]{img/06_overall.png}  
+\end{frame}
+
+\section{Programmausführung auf dem Prozessor}
+\section{JVM}
+\section{Euer Programm}
+
+\begin{frame}{\secname}
+Später: 
+\begin{enumerate}
+\item Kontext: Wo läuft mein Programm?
+\item Vorlagen zum Programmieren
+\item Grundlegende Programmelemente
+	\begin{itemize}
+	\item Befehle
+	\item Variablen
+	\item Bedingungen
+	\item Schleifen
+	\end{itemize}
+\item Fehlerquellen und Fehlersuche
+\item Effiziente Verwendung von Editoren
+\item Versionskontrolle
+\item Programmierstil
+\item Kollaboratives Programmieren
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+  
+\end{frame}
+
+\begin{frame}[fragile]
+  \begin{lstlisting}
+mov cx, 10
+mov esi 0
+
+loopstart:
+   mov esi, esi + 1
+   dec cx
+   jnz loopstart
+  \end{lstlisting}
+\end{frame}
+
+\end{document}
