@@ -1,0 +1,58 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color
+  basicstyle=\footnotesize,        % size of fonts used for the code
+  breaklines=true,                 % automatic line breaking only at whitespace
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  keywordstyle=\color{blue},       % keyword style
+  stringstyle=\color{mymauve},     % string literal style
+  language=Java,
+  basicstyle=\ttfamily
+}
+
+\lstset{literate=%
+{Ö}{{\"O}}1
+{Ä}{{\"A}}1
+{Ü}{{\"U}}1
+{ß}{{\ss}}2
+{ü}{{\"u}}1
+{ä}{{\"a}}1
+{ö}{{\"o}}1
+}
+
+\usetheme{Berkeley}
+
+\title{PK0}
+\subtitle{Zusatzkurs für Programmieranfänger im WS 16/17}
+\author{Marvin Gülzow}
+\institute{Universität Konstanz}
+\date{2016-11-09}
+
+\begin{document}
+\frame{\maketitle}
+
+\begin{frame}
+\frametitle{Inhalt}
+\tableofcontents
+\end{frame}
+
+\section{Kontext}
+\subsection{Transistoren}
+\begin{frame}{\subsecname}
+  \centering
+  \includegraphics[width=\textwidth]{img/01_transistor.png}  
+\end{frame}
+
+\end{document}
